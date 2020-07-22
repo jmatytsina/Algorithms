@@ -138,23 +138,23 @@ public class Percolation
         int n = 0;
         double coefficient = -1.0;
         while (n <= 0) {
-            System.out.println("Введите число узлов в столбце (строке):");
+            System.out.println("Input the number of cells in row (column):");
             var s = sc.next();
             try{
                 n = Integer.parseInt(s);
             }
             catch(Throwable t){
-                System.out.println("Ошибка! Введено неверное число!");
+                System.out.println("Error! Wrong number!");
                 continue;
             }
             if (n <= 0) {
-                System.out.println("Число узлов должно быть больше нуля!");
+                System.out.println("The number must be more than zero!");
             }
         }
         sc.close();
 
         Percolation percolation = new Percolation(n);
-        System.out.println("Инициализация завершена");
+        System.out.println("The initialization is complete");
         int i = 0;
         while (!percolation.percolates()) {
             int row = (int) (Math.random() * n);
@@ -165,6 +165,6 @@ public class Percolation
             i++;
         }
         double coefficientOfPercolation = ((double)percolation.numberOfOpenSites())/(n * n);
-        System.out.println("Коэффициент просачивания равен " + coefficientOfPercolation);
+        System.out.println("The coefficient of percolation is " + coefficientOfPercolation);
     }
 }
