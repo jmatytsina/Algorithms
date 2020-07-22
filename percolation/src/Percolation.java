@@ -138,7 +138,7 @@ public class Percolation
         int n = 0;
         double coefficient = -1.0;
         while (n <= 0) {
-            System.out.println("Input the number of cells in row (column):");
+            System.out.println("Input the number of cells in row (or column):");
             var s = sc.next();
             try{
                 n = Integer.parseInt(s);
