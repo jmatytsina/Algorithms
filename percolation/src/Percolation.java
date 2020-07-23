@@ -8,6 +8,8 @@ import java.util.*;
  * throw it from top to bottom. With one step, one random
  * cell is opened. If any bottom cell is full of liquid
  * then the system is percolates.
+ *
+ * It uses quick weighted union-find algorithm with path compression.
  */
 public class Percolation
 {
